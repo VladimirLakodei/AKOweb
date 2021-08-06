@@ -1,0 +1,91 @@
+html, body, div, p, h1, h2, h3, h4, h5, h6, a, span, img, ol, ul, li, form, input {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+}
+
+body {
+  background: #fff;
+  font: normal 15px 'Gotham Pro', sans-serif;
+  color: #000;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button, button:active, button:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  padding: 25px 0;
+  border-bottom: 1px solid #000000;
+  /* background: url(../img/top-bg.png) no-repeat 615px bottom; */
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__link {
+  margin-left: 20px;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: #053BFB;
+  border-bottom: 1px solid #053BFB;
+}
+
+.main {
+  margin-top: 55px;
+}
+
+/* .top-block .container:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff url(../img/img1.png) no-repeat 40px center;
+  top: 285px;
+  left: 475px;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 1019px) {
+	.container {
+		max-width: 768px;
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		max-width: 480px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.container {
+		max-width: 320px;
+	}
+}
