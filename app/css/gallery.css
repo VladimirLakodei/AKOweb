@@ -1,4 +1,8 @@
-/* .masonry {
+.main {
+  margin-top: 55px;
+}
+
+.masonry {
   display: flex;
   flex-wrap: wrap;
   align-items: self-end;
@@ -9,4 +13,54 @@
   width: 21%;
   height: auto;
   margin-bottom: 40px;
-} */
+  cursor: pointer;
+}
+
+.gallery {
+  display: none;
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  margin: 0 10%;
+  position: absolute;
+}
+
+.gallery__header {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 25px;
+}
+
+.gallery__close {
+  width: 33px;
+  height: 33px;
+  border: none;
+  background: url(../img/icons/close.svg) center;
+  cursor: pointer;
+}
+
+.gallery__close:hover {
+  background: url(../img/icons/close-hover.svg) center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+
+

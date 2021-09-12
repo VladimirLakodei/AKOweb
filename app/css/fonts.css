@@ -1,0 +1,6 @@
+@font-face {
+  font-family: CallingCode;
+  src: url(../fonts/calling_code/CallingCode-Regular.otf) format('otf'),
+       url(../fonts/calling_code/CallingCode-Regular.ttf) format('ttf');
+  font-weight: 400;
+}

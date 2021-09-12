@@ -1,0 +1,80 @@
+header,
+footer {
+  z-index: 10;
+}
+
+canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+#btnClear {
+  position: absolute;
+  display: inline-block;
+  color: #999999;
+  top: 87%;
+  margin: auto;
+  left: 89.25%;
+  font-family: GTAmerica-ExtendedMedium;
+  font-size: 20px;
+  border: none;
+  padding: 0px 0px;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  background-color: inherit;
+  user-select: none;
+  z-index: 5;
+}
+
+#btnClear:hover {
+  color: #000000;
+}
+
+#btnClear, #btnClear:focus {
+  outline: 0;
+  box-shadow: none!important;
+}
+
+.information {
+  max-width: 390px;
+  margin-bottom: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+
+.telephone {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.draw {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+}
+
+.telegram {
+  position: absolute;
+  left: 30%;
+  bottom: 15%;
+}
+
+.instagram {
+  position: absolute;
+  left: 60%;
+  bottom: 10%;
+}
+
+.behance {
+  position: absolute;
+  left: 80%;
+  bottom: 20%;
+}
