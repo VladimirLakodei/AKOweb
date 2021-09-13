@@ -29,11 +29,15 @@
 }
 
 .gallery__header {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 25px 0 45px;
+  padding: 25px 10% 45px;
   background: #fff;
   z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .gallery__close {
@@ -66,6 +70,7 @@
 .swiper__item img {
   width: auto;
   height: calc(100vh - 200px);
+  margin-top: 105px;
 }
 
 .swiper-button-prev,
