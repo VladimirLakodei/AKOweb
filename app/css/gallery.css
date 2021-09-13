@@ -31,7 +31,9 @@
 .gallery__header {
   display: flex;
   justify-content: flex-end;
-  padding-top: 25px;
+  padding: 25px 0 45px;
+  background: #fff;
+  z-index: 10;
 }
 
 .gallery__close {
@@ -46,12 +48,33 @@
   background: url(../img/icons/close-hover.svg) center;
 }
 
+.swiper {
+  margin: 0 0 100px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.swiper__item {
+  height: 100vh;
+}
+
+.swiper__item img {
+  width: auto;
+  height: calc(100vh - 200px);
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
   top: 50%;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .swiper-button-next {
@@ -61,6 +84,5 @@
 .swiper-button-prev {
   left: 0;
 }
-
 
 

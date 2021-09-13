@@ -18,7 +18,7 @@ body {
   background: #fff;
   font: 400 15px CallingCode, sans-serif;
   color: #000;
-  /* cursor: url(../img/cursor.png), auto !important; */
+  cursor: url(../img/cursor.png), auto !important;
   background-color: transparent;
 }
 
