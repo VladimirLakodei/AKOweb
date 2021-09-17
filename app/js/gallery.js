@@ -40,6 +40,7 @@ function closeGallery() {
   gallery.style.display = 'none'
   wrapper.style.display = 'block'
   body.classList.remove('lock')
+  swiperWrapper.classList.remove('animated')
 }
 
 function initGallery() {
@@ -57,7 +58,7 @@ function initGallery() {
   let translateY = offset * (picuresNumber - 1)
 
   swiperWrapper.style.transform = `translate3d(0px, -${translateY}px, 0px)`
-  swiperWrapper.style.transition = `transform 1000ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;`
+  swiperWrapper.classList.add('animated')
   
   console.log('frt', frt)
 
