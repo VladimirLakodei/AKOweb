@@ -12,13 +12,13 @@ document.querySelectorAll('.masonry__item').forEach(item => {
   item.addEventListener('click', openGallery)
 })
 
-document.querySelectorAll('.swiper-button-next').forEach(item => {
+document.querySelectorAll('.half_right').forEach(item => {
   item.addEventListener('click', () => {
     go(1)
   })
 })
 
-document.querySelectorAll('.swiper-button-prev').forEach(item => {
+document.querySelectorAll('.half_left').forEach(item => {
   item.addEventListener('click', () => {
     go(-1)
   })
@@ -32,6 +32,7 @@ function openGallery(event) {
   gallery.style.display = 'block'
   wrapper.style.display = 'none'
   body.classList.add('lock')
+  body.classList.add('gallery_open')
 
   setTimeout(initGallery, 100)
 }
@@ -40,6 +41,7 @@ function closeGallery() {
   gallery.style.display = 'none'
   wrapper.style.display = 'block'
   body.classList.remove('lock')
+  body.classList.remove('gallery_open')
   swiperWrapper.classList.remove('animated')
 }
 

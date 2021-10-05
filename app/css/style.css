@@ -18,7 +18,6 @@ body {
   background: #fff;
   font: 400 15px CallingCode, sans-serif;
   color: #000;
-  cursor: url(../img/cursor.png), auto !important;
   background-color: transparent;
 }
 
@@ -60,6 +59,10 @@ button, button:active, button:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.nav {
+  cursor: auto !important;
 }
 
 .nav__link {

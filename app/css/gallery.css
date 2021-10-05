@@ -1,3 +1,31 @@
+body {
+  cursor: url(../img/fly.png), auto !important;
+}
+
+.half_left,
+.half_right {
+  display: none;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.half_left {
+  left: 0;
+  cursor: url(../img/icons/arrow-left.svg), auto !important;
+}
+
+.half_right {
+  right: 0;
+  cursor: url(../img/icons/arrow-right.svg), auto !important;
+}
+
+body.gallery_open .half_left,
+body.gallery_open .half_right {
+  display: block;
+}
+
 .main {
   margin-top: 55px;
 }
@@ -37,6 +65,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  cursor: auto !important;
 }
 
 .gallery__close {
@@ -75,22 +104,3 @@
   height: calc(100vh - 200px);
   margin-top: 105px;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: 50%;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-button-prev {
-  left: 0;
-}
-
-
