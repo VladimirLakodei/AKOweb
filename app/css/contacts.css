@@ -12,6 +12,7 @@ canvas {
   left: 0;
   position: absolute;
   z-index: 1;
+  /*pointer-events:none;*/
 }
 
 main {
@@ -51,7 +52,7 @@ main {
   margin-bottom: 100px;
   text-align: center;
   position: relative;
-  z-index: 4;
+  /*z-index: 4;*/
 }
 
 .telephone {

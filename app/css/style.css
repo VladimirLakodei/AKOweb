@@ -15,10 +15,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background: #fff;
   font: 400 15px CallingCode, sans-serif;
   color: #000;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 body.lock {
