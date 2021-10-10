@@ -2,8 +2,8 @@ var drawingApp = (function () {
 
   "use strict";
 
-  var canvasWidth = window.innerWidth,
-    canvasHeight = window.innerHeight,
+  var canvasWidth = document.body.clientWidth,
+    canvasHeight = document.body.clientHeight - 10,
     clearButton = document.getElementById('btnClear'),
     clickX = [],
     clickY = [],
@@ -14,9 +14,8 @@ var drawingApp = (function () {
 
     // Resizes the canvas.
     resizeCanvas = function () {
-
-      canvasWidth = window.innerWidth;
-      canvasHeight = window.innerHeight;
+      canvasWidth = document.body.clientWidth;
+      canvasHeight = document.body.clientHeight - 10;
 
       canvas.setAttribute('width', canvasWidth);
       canvas.setAttribute('height', canvasHeight);
@@ -131,6 +130,9 @@ var drawingApp = (function () {
     */
     init = function () {
 
+      console.log('canvasWidth', canvasWidth)
+      console.log('canvasHeight', canvasHeight)
+
       // Create the canvas (Neccessary for IE because it doesn't know what a canvas element is)
       canvas = document.createElement('canvas');
       canvas.setAttribute('width', canvasWidth);
@@ -160,4 +162,6 @@ var drawingApp = (function () {
 
 }());
 
-drawingApp.init();
+setTimeout(function() {
+  drawingApp.init();
+}, 10);

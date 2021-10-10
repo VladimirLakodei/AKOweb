@@ -1,5 +1,5 @@
 body {
-  cursor: url(../img/fly.png), auto !important;
+  /*cursor: url(../img/fly.png), auto !important;*/
 }
 
 .half_left,
@@ -38,10 +38,45 @@ body.gallery_open .half_right {
 }
 
 .masonry__item {
-  width: 21%;
+  width: 19%;
   height: auto;
-  margin-bottom: 40px;
+  margin: 0 2% 40px 0;
+  position: relative;
 }
+
+.masonry__item:last-child {
+  margin: 0 0 40px 0;
+}
+
+.plane {
+  width: 100%;
+  display: inline-block;
+}
+
+.masonry__item img {
+  width: 100%;
+  display: block;
+}
+
+.masonry__canvas {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/*.masonry__canvas_hidden {
+  display: none;
+}
+
+.masonry__item:hover .masonry__canvas_hidden {
+  display: block;
+}*/
+
+/*.masonry__item:hover img {
+  opacity: 0;
+}*/
 
 .gallery {
   display: none;
