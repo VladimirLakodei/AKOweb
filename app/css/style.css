@@ -50,6 +50,10 @@ button, button:active, button:focus {
 
 .header {
   padding: 10px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 20;
+  background: #fff;
   /* border-bottom: 1px solid #000000; */
   /* background: url(../img/top-bg.png) no-repeat 615px bottom; */
 }

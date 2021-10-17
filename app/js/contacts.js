@@ -129,10 +129,6 @@ var drawingApp = (function () {
     * Creates a canvas element.
     */
     init = function () {
-
-      console.log('canvasWidth', canvasWidth)
-      console.log('canvasHeight', canvasHeight)
-
       // Create the canvas (Neccessary for IE because it doesn't know what a canvas element is)
       canvas = document.createElement('canvas');
       canvas.setAttribute('width', canvasWidth);
