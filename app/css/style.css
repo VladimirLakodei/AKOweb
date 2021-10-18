@@ -115,6 +115,12 @@ button, button:active, button:focus {
   display: block;
 }
 
+.footer {
+  margin-top: -20px;
+  padding-top: 20px;
+  cursor: auto !important;
+}
+
 .social {
   display: flex;
   justify-content: center;

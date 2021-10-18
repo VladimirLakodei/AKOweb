@@ -67,6 +67,7 @@ body {
   right: -120px;
   bottom: -115px;
   cursor: url(../img/fly.png), auto !important;
+  z-index: 20;
 }
 
 @-webkit-keyframes moveX {
