@@ -6,6 +6,7 @@ html, body, div, p, h1, h2, h3, h4, h5, h6, a, span, img, ol, ul, li, form, inpu
   line-height: 1.25;
   background: transparent;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html, body {
@@ -43,7 +44,7 @@ button, button:active, button:focus {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -54,8 +55,6 @@ button, button:active, button:focus {
   top: 0px;
   z-index: 20;
   background: #fff;
-  /* border-bottom: 1px solid #000000; */
-  /* background: url(../img/top-bg.png) no-repeat 615px bottom; */
 }
 
 .header__inner {
@@ -83,10 +82,6 @@ button, button:active, button:focus {
   background: url(../img/egg.png);
   background-size: contain;
   transform: rotate(-4deg);
-}
-
-.nav {
-  cursor: auto !important;
 }
 
 .nav__link {
@@ -118,7 +113,6 @@ button, button:active, button:focus {
 .footer {
   margin-top: -20px;
   padding-top: 20px;
-  cursor: auto !important;
 }
 
 .social {
@@ -137,20 +131,13 @@ button, button:active, button:focus {
 }
 
 @media screen and (max-width: 1019px) {
-	.container {
-		max-width: 768px;
-		padding: 0 10px;
-	}
+
 }
 
 @media screen and (max-width: 767px) {
-	.container {
-		max-width: 480px;
-	}
+
 }
 
 @media screen and (max-width: 479px) {
-	.container {
-		max-width: 320px;
-	}
+
 }

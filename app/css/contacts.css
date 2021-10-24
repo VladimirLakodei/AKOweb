@@ -1,9 +1,9 @@
-body {
+body,
+a:hover {
   cursor: url(../img/cursor.png), auto !important;
 }
 
-header,
-footer {
+a, header {
   z-index: 10;
 }
 

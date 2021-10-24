@@ -4,9 +4,3 @@
        url(../fonts/calling_code/CallingCode-Regular.ttf) format('truetype');
   font-weight: 400;
 }
-
-@font-face {
-  font-family: BarlowSemiCondensed;
-  src: url(../fonts/barlow_semi_condensed/BarlowSemiCondensed-BoldItalic.ttf) format('truetype');
-  font-weight: 700;
-}

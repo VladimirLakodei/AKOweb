@@ -1,4 +1,7 @@
-body {
+body,
+button,
+a,
+a:hover {
   cursor: url(../img/fly.png), auto !important;
 }
 
@@ -66,18 +69,6 @@ body.gallery_open .half_right {
   position: absolute;
 }
 
-/*.masonry__canvas_hidden {
-  display: none;
-}
-
-.masonry__item:hover .masonry__canvas_hidden {
-  display: block;
-}*/
-
-/*.masonry__item:hover img {
-  opacity: 0;
-}*/
-
 .gallery {
   display: none;
   position: fixed;
@@ -94,25 +85,23 @@ body.gallery_open .half_right {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 25px 10% 45px;
+  padding: 15px 10% 35px;
   background: #fff;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
-  cursor: auto !important;
 }
 
 .gallery__close {
-  width: 33px;
-  height: 33px;
+  width: 53px;
+  height: 53px;
   border: none;
-  background: url(../img/icons/close.svg) center;
-  cursor: pointer;
+  background: url(../img/icons/close.svg) no-repeat center;
 }
 
 .gallery__close:hover {
-  background: url(../img/icons/close-hover.svg) center;
+  background: url(../img/icons/close-hover.svg) no-repeat center;
 }
 
 .swiper {
@@ -121,9 +110,11 @@ body.gallery_open .half_right {
 
 .swiper-wrapper {
   display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-  align-items: center;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
 }
 
 .swiper-wrapper.animated {
@@ -131,7 +122,10 @@ body.gallery_open .half_right {
 }
 
 .swiper__item {
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .swiper__item img {

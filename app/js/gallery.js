@@ -7,7 +7,7 @@
 
   let currentSlide = 1
   let picuresNumber = 14
-  let offset = window.innerHeight
+  let offset = window.innerWidth
 
   document.querySelectorAll('.masonry__item').forEach(item => {
     item.addEventListener('click', openGallery)
@@ -48,26 +48,18 @@
 
   function initGallery() {
     let picures = ''
-    
 
-     for (let index = 1; index <= picuresNumber; index++) {
-      picures += `<div class="swiper__item"><img id="frt" data-masonry="1" src="img/picures/1/${index}.jpg" alt="image" /></div>`
+    for (let index = 1; index <= picuresNumber; index++) {
+      picures += `<div class="swiper__item"><img data-masonry="1" src="img/picures/1/${index}.jpg" alt="image" /></div>`
     }
 
     swiperWrapper.innerHTML = picures
 
-    const frt = document.querySelector('#frt')
+    let translateX = offset * (picuresNumber - 1)
 
-    let translateY = offset * (picuresNumber - 1)
-
-    swiperWrapper.style.transform = `translate3d(0px, -${translateY}px, 0px)`
+    swiperWrapper.style.width = `${translateX*picuresNumber}px`
+    swiperWrapper.style.transform = `-translate3d(${translateX}px, 0px, 0px)`
     swiperWrapper.classList.add('animated')
-    
-    console.log('frt', frt)
-
-   
-
-    // `<img class="masonry__item" data-masonry="1" src="img/masonry/${index}.jpg" alt="image" />`
   }
 
   function go(direction) {
@@ -87,10 +79,10 @@
     // alert(currentSlide)
 
     console.log('currentSlide', currentSlide)
-    let translateY = offset * (picuresNumber - currentSlide)
+    let translateX = offset * (picuresNumber - currentSlide)
 
-    console.log('translateY', translateY)
-    swiperWrapper.style.transform = `translate3d(0px, -${translateY}px, 0px)`
+    console.log('translateX', translateX)
+    swiperWrapper.style.transform = `translate3d(-${translateX}px, 0px, 0px)`
   }
 
   // const swiper = new Swiper('.swiper', {

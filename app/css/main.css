@@ -1,4 +1,5 @@
-body {
+body,
+a:hover {
   cursor: url(../img/cursor.png), auto !important;
 }
 
@@ -9,28 +10,17 @@ body {
 }
 
 .inner {
+  margin-bottom: 40px;
   position: relative;
 }
 
 .title {
-	font-family: BarlowSemiCondensed;
-	font-style: italic;
-	font-weight: bold;
-	font-size: 100px;
-	line-height: 120px;
-	text-align: center;
-	font-feature-settings: 'kern' off, 'liga' off;
-	color: #000000;
-  transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -webkit-transition: all .2s linear;
-  -o-transition: all .2s linear;
+  width: 674px;
+  height: auto;
 }
 
-.title:hover {
-  -webkit-backface-visibility: hidden;
-  -webkit-animation: zomg 0.15s infinite;
-  animation: zomg 0.15s infinite;
+.description {
+  margin-top: 20px; 
 }
 
 @-webkit-keyframes zomg {
@@ -51,53 +41,12 @@ body {
   80%      { color: #FF0000; }
 }
 
-.description {
-  position: absolute;
-  -webkit-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -moz-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  -o-animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  animation: moveX 2s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-  z-index: 30;
-}
-
 .egg {
   width: 240px;
   height: 250px;
   position: absolute;
   right: -120px;
-  bottom: -115px;
+  bottom: -75px;
   cursor: url(../img/fly.png), auto !important;
   z-index: 20;
-}
-
-@-webkit-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 355px); }
-}
-
-@-moz-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 355px); }
-}
-
-@-o-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 355px); }
-}
-
-@keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 355px); }
-}
-
-@-webkit-keyframes moveY {
-  from { top: 0; } to { top: calc(100% - 20px); }
-}
-
-@-moz-keyframes moveY {
-  from { top: 0; } to { top: calc(100% - 20px); }
-}
-
-@-o-keyframes moveY {
-  from { top: 0; } to { top: calc(100% - 20px); }
-}
-
-@keyframes moveY {
-  from { top: 0; } to { top: calc(100% - 20px); }
 }
