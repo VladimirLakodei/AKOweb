@@ -3,8 +3,9 @@
   const wrapper = document.querySelector('.wrapper')
   const gallery = document.querySelector('.gallery')
   const close = document.querySelector('.gallery__close')
-  const swiperWrapper = document.querySelector('.swiper-wrapper')
+  const swiperWrapper = document.querySelector('.glide__slides')
 
+  let glide
   let currentSlide = 1
   let picuresNumber = 14
   let offset = window.innerWidth
@@ -50,40 +51,49 @@
     let picures = ''
 
     for (let index = 1; index <= picuresNumber; index++) {
-      picures += `<div class="swiper__item"><img data-masonry="1" src="img/picures/1/${index}.jpg" alt="image" /></div>`
+      picures += `<div class="swiper__item" class="glide__slide"><img data-masonry="1" src="img/picures/1/${index}.jpg" alt="image" /></div>`
     }
 
     swiperWrapper.innerHTML = picures
 
-    let translateX = offset * (picuresNumber - 1)
+    setTimeout(() => {
+      glide = new Glide('.glide').mount()
+    }, 10)
 
-    swiperWrapper.style.width = `${translateX*picuresNumber}px`
-    swiperWrapper.style.transform = `-translate3d(${translateX}px, 0px, 0px)`
-    swiperWrapper.classList.add('animated')
+    // let translateX = offset * (picuresNumber - 1)
+
+    // swiperWrapper.style.width = `${translateX*picuresNumber}px`
+    // swiperWrapper.style.transform = `-translate3d(${translateX}px, 0px, 0px)`
+    // swiperWrapper.classList.add('animated')
   }
 
   function go(direction) {
-    // alert(direction)
-
-    if (currentSlide + direction === 0) {
-      // debugger
-      currentSlide = picuresNumber
-    } else if (currentSlide + direction > picuresNumber) {
-      // debugger
-      currentSlide = 1
-    } else {
-      // debugger
-      currentSlide = currentSlide + direction 
-    }
-
-    // alert(currentSlide)
-
-    console.log('currentSlide', currentSlide)
-    let translateX = offset * (picuresNumber - currentSlide)
-
-    console.log('translateX', translateX)
-    swiperWrapper.style.transform = `translate3d(-${translateX}px, 0px, 0px)`
+    console.log('direction', direction)
+    glide.go(direction === 1 ? '>' : '<')
   }
+
+  // function go(direction) {
+  //   // alert(direction)
+
+  //   if (currentSlide + direction === 0) {
+  //     // debugger
+  //     currentSlide = picuresNumber
+  //   } else if (currentSlide + direction > picuresNumber) {
+  //     // debugger
+  //     currentSlide = 1
+  //   } else {
+  //     // debugger
+  //     currentSlide = currentSlide + direction 
+  //   }
+
+  //   // alert(currentSlide)
+
+  //   console.log('currentSlide', currentSlide)
+  //   let translateX = offset * (picuresNumber - currentSlide)
+
+  //   console.log('translateX', translateX)
+  //   swiperWrapper.style.transform = `translate3d(-${translateX}px, 0px, 0px)`
+  // }
 
   // const swiper = new Swiper('.swiper', {
   //   navigation: {
