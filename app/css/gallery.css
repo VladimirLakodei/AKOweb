@@ -133,3 +133,22 @@ body.gallery_open .half_right {
   height: calc(100vh - 200px);
   margin-top: 105px;
 }
+
+.swiper__item .description {
+  margin-top: 20px;
+}
+
+.swiper__item .description a {
+  position: relative;
+  color: #053BFB;
+}
+
+.swiper__item .description a:after {
+  border-bottom: 1px solid #053BFB;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 1px;
+  bottom: 3px;
+}

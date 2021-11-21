@@ -6,8 +6,10 @@
   const swiperWrapper = document.querySelector('.glide__slides')
 
   let glide
+  let masonry
+  let description = ''
   let currentSlide = 1
-  let picuresNumber = 14
+  let picuresNumber = 0
   let offset = window.innerWidth
 
   document.querySelectorAll('.masonry__item').forEach(item => {
@@ -30,13 +32,18 @@
 
   function openGallery(event) {
     currentSlide = 1
-    const masonry = event.target.dataset.masonry
-    gallery.style.display = 'block'
-    wrapper.style.display = 'none'
-    body.classList.add('lock')
-    body.classList.add('gallery_open')
+    const parent = event.target.closest('[data-masonry]')
+    if (parent) {
+      masonry = parent.dataset.masonry
+      picuresNumber = parent.dataset.slides
+      description = parent.dataset.description
+      gallery.style.display = 'block'
+      wrapper.style.display = 'none'
+      body.classList.add('lock')
+      body.classList.add('gallery_open')
 
-    setTimeout(initGallery, 100)
+      setTimeout(initGallery, 100)
+    }
   }
 
   function closeGallery() {
@@ -51,7 +58,7 @@
     let picures = ''
 
     for (let index = 1; index <= picuresNumber; index++) {
-      picures += `<div class="swiper__item" class="glide__slide"><img data-masonry="1" src="img/picures/1/${index}.jpg" alt="image" /></div>`
+      picures += `<div class="swiper__item" class="glide__slide"><div><img data-masonry="${masonry}" src="img/picures/${masonry}/${index}.jpg" alt="image" /> <div class="description">${description ? description : ''}</div></div></div>`
     }
 
     swiperWrapper.innerHTML = picures
@@ -68,7 +75,6 @@
   }
 
   function go(direction) {
-    console.log('direction', direction)
     glide.go(direction === 1 ? '>' : '<')
   }
 

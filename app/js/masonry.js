@@ -9,10 +9,12 @@
     items[i].addEventListener('mouseout', (event) => {
       timerId = setTimeout(() => {
         const imageCanvas = items[i].querySelector('canvas');
-        rendered[i].curtains.dispose()
+        if (rendered[i]) {
+          rendered[i].curtains.dispose()
+        }
       }, 10)
     }, false);
- 
+
     items[i].addEventListener("mouseover", (event) => {
       clearTimeout(timerId);
       const imageCanvas = items[i].querySelector('canvas');
