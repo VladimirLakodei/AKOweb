@@ -76,6 +76,7 @@ body.gallery_open .half_right {
   margin-bottom: 15%;
 }
 
+.responsive-iframe a,
 .responsive-iframe iframe {
   position: absolute;
   top: 0;
