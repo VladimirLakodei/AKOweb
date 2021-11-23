@@ -83,3 +83,18 @@ main {
   left: 80%;
   bottom: 20%;
 }
+
+@media screen and (max-width: 767px) {
+  #btnClear {
+    top: 85%;
+    left: 70%;
+  }
+
+  .telegram {
+    bottom: 30%;
+  }
+
+  .instagram {
+    left: 15%;
+  }
+}

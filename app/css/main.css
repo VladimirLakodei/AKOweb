@@ -10,7 +10,6 @@ a:hover {
 }
 
 .inner {
-  margin-bottom: 40px;
   position: relative;
 }
 
@@ -20,25 +19,7 @@ a:hover {
 }
 
 .description {
-  margin-top: 20px; 
-}
-
-@-webkit-keyframes zomg {
-  0%       { color: #9400D3; }
-  16%      { color: #0000FF; }
-  32%      { color: #00FF00; }
-  48%      { color: #FFFF00; }
-  64%      { color: #FF7F00; }
-  80%      { color: #FF0000; }
-}
-
-@keyframes zomg {
-  0%       { color: #9400D3; }
-  16%      { color: #0000FF; }
-  32%      { color: #00FF00; }
-  48%      { color: #FFFF00; }
-  64%      { color: #FF7F00; }
-  80%      { color: #FF0000; }
+  margin: 20px 0 40px;
 }
 
 .egg {
@@ -46,7 +27,53 @@ a:hover {
   height: 250px;
   position: absolute;
   right: -120px;
-  bottom: -75px;
+  bottom: -95px;
   cursor: url(../img/fly.png), auto !important;
   z-index: 20;
 }
+
+@media screen and (max-width: 1019px) {
+  .description {
+    margin: 10px 0;
+  }
+
+  .title {
+    width: 640px;
+  }
+
+  .egg {
+    right: -60px;
+    bottom: -65px;
+    width: 150px;
+    height: 195px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    width: 460px;
+  }
+
+  .egg {
+    width: 80px;
+    height: 105px;
+    bottom: -15px;
+    right: -10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .title {
+    width: 300px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .egg {
+    width: 60px;
+    height: 75px;
+  }
+}
+

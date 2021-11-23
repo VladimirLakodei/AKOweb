@@ -110,6 +110,10 @@ button, button:active, button:focus {
   display: block;
 }
 
+.nav__link:first-child {
+  margin-left: 0;
+}
+
 .footer {
   margin-top: -20px;
   padding-top: 20px;
@@ -131,13 +135,26 @@ button, button:active, button:focus {
 }
 
 @media screen and (max-width: 1019px) {
-
+  
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+    padding: 10px 0;
+  }
 
+  .nav__link {
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width: 479px) {
+  .header__inner {
+    display: block;
+  }
 
+  .logo__wrapper {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 }
