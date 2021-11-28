@@ -129,6 +129,11 @@ button, button:active, button:focus {
   margin: 0 10px;
 }
 
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
 .copyright {
   text-align: center;
   margin-bottom: 20px;

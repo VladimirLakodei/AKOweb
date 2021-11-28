@@ -54,7 +54,7 @@
       picuresNumber = parent.dataset.slides
       description = parent.dataset.description
       gallery.style.display = 'block'
-      wrapper.style.display = 'none'
+      // wrapper.style.display = 'none'
       body.classList.add('lock')
       body.classList.add('gallery_open')
 
@@ -65,7 +65,7 @@
   function closeGallery() {
     glide.destroy()
     gallery.style.display = 'none'
-    wrapper.style.display = 'block'
+    // wrapper.style.display = 'block'
     body.classList.remove('lock')
     body.classList.remove('gallery_open')
     swiperWrapper.classList.remove('animated')
@@ -99,7 +99,6 @@
           })
         })
       }, 10)
-      console.log(123)
     }, 10)
 
     // let translateX = offset * (picuresNumber - 1)
