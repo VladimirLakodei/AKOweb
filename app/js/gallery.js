@@ -16,17 +16,33 @@
     item.addEventListener('click', openGallery)
   })
 
-  document.querySelectorAll('.half_right').forEach(item => {
-    item.addEventListener('click', () => {
-      go(1)
-    })
-  })
+  // document.querySelectorAll('.half_right').forEach(item => {
+  //   item.addEventListener('click', () => {
+  //     go(1)
+  //   })
+  // })
 
-  document.querySelectorAll('.half_left').forEach(item => {
-    item.addEventListener('click', () => {
+  // document.querySelectorAll('.half_left').forEach(item => {
+  //   item.addEventListener('click', () => {
+  //     go(-1)
+  //   })
+  // })
+
+  function initControlButtons(event) {
+    console.log('event', event)
+
+    let classList = event.target.classList
+
+    console.log('classList', classList)
+
+    if (classList.contains('half_left')) {
       go(-1)
-    })
-  })
+    }
+
+    if (classList.contains('half_right')) {
+      go(1)
+    }
+  }
 
   close.addEventListener('click', closeGallery)
 
@@ -47,24 +63,43 @@
   }
 
   function closeGallery() {
+    glide.destroy()
     gallery.style.display = 'none'
     wrapper.style.display = 'block'
     body.classList.remove('lock')
     body.classList.remove('gallery_open')
     swiperWrapper.classList.remove('animated')
+    document.removeEventListener('click', initControlButtons)
   }
 
   function initGallery() {
     let picures = ''
 
     for (let index = 1; index <= picuresNumber; index++) {
-      picures += `<div class="swiper__item" class="glide__slide"><div><img data-masonry="${masonry}" src="img/picures/${masonry}/${index}.jpg" alt="image" /> <div class="description">${description ? description : ''}</div></div></div>`
+      picures += `<div class="swiper__item" class="glide__slide"><div><img data-masonry="${masonry}" src="img/picures/${masonry}/${index}.jpg" alt="image" /> <div class="description">${description && index === 1 ? description : ''}</div></div><div class="half_left"></div>
+        <div class="half_right"></div></div>`
     }
 
     swiperWrapper.innerHTML = picures
 
     setTimeout(() => {
       glide = new Glide('.glide').mount()
+      // gallery.addEventListener('click', initControlButtons)
+      setTimeout(() => {
+        gallery.addEventListener('click', initControlButtons)
+        document.querySelectorAll('.half_right').forEach(item => {
+          item.addEventListener('click', () => {
+            go(1)
+          })
+        })
+
+        document.querySelectorAll('.half_left').forEach(item => {
+          item.addEventListener('click', () => {
+            go(-1)
+          })
+        })
+      }, 10)
+      console.log(123)
     }, 10)
 
     // let translateX = offset * (picuresNumber - 1)
@@ -74,9 +109,25 @@
     // swiperWrapper.classList.add('animated')
   }
 
+  // function goNext() {
+  //   go(1)
+  // }
+
+  // function goPrev() {
+  //   go(-1)
+  // }
+
   function go(direction) {
     glide.go(direction === 1 ? '>' : '<')
   }
+
+  // function printMousePos(event) {
+  //   screenWidth = document.body.clientWidth,
+  //   screenHeight = document.body.clientHeight
+  //   console.log("clientX: " + event.clientX + " - clientY: " + event.clientY)
+  // }
+
+  // document.addEventListener("click", printMousePos);
 
   // function go(direction) {
   //   // alert(direction)
