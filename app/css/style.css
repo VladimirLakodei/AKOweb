@@ -122,11 +122,11 @@ button, button:active, button:focus {
 .social {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .social a {
-  margin: 0 10px;
+  padding: 10px;
 }
 
 .social img {

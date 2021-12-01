@@ -38,10 +38,30 @@ body.gallery_open .half_right {
 }
 
 .masonry {
-  display: flex;
+/*  display: flex;
   flex-wrap: wrap;
   align-items: self-end;
-  justify-content: space-between;
+  justify-content: space-between;*/
+position: relative;
+    height: 1988px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
 }
 
 .masonry__item {
