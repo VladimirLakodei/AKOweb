@@ -55,6 +55,22 @@ main {
   /*z-index: 4;*/
 }
 
+.information .link {
+  display: inline-block;
+  color: #053BFB;
+  position: relative;
+}
+
+.information .link:after {
+  border-bottom: 1px solid #053BFB;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 1px;
+  bottom: 2px;
+}
+
 .telephone {
   display: inline-block;
   margin-bottom: 20px;
@@ -62,8 +78,8 @@ main {
 
 .draw {
   position: absolute;
-  left: 10%;
-  bottom: 20%;
+  left: 25%;
+  bottom: 30%;
 }
 
 .telegram {
@@ -96,5 +112,11 @@ main {
 
   .instagram {
     left: 15%;
+  }
+
+  .draw {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
   }
 }
