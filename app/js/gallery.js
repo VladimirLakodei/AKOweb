@@ -29,11 +29,7 @@
   // })
 
   function initControlButtons(event) {
-    console.log('event', event)
-
     let classList = event.target.classList
-
-    console.log('classList', classList)
 
     if (classList.contains('half_left')) {
       go(-1)
@@ -53,6 +49,7 @@
       masonry = parent.dataset.masonry
       picuresNumber = parent.dataset.slides
       description = parent.dataset.description
+      currentSlide = parent.dataset.start ? parent.dataset.start : 1
       gallery.style.display = 'block'
       // wrapper.style.display = 'none'
       body.classList.add('lock')
@@ -74,11 +71,19 @@
 
   function initGallery() {
     let picures = ''
+    let photosArray = []
+    let currentIndex = currentSlide - 1
 
     for (let index = 1; index <= picuresNumber; index++) {
-      picures += `<div class="swiper__item" class="glide__slide"><div><img data-masonry="${masonry}" src="img/picures/${masonry}/${index}.jpg" alt="image" /> <div class="description">${description && index === 1 ? description : ''}</div></div><div class="half_left"></div>
-        <div class="half_right"></div></div>`
+      photosArray.push(index)
     }
+
+    photosArray = [...photosArray.slice(currentIndex), ...photosArray.slice(0, currentIndex).reverse()]
+
+    photosArray.forEach(index => {
+      picures += `<div class="swiper__item" class="glide__slide"><div><img data-masonry="${masonry}" src="img/picures/${masonry}/${index}.jpg" alt="image" /> <div class="description">${description && index == currentSlide ? description : ''}</div></div><div class="half_left"></div>
+        <div class="half_right"></div></div>`
+    })
 
     swiperWrapper.innerHTML = picures
 
